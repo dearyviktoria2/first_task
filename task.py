@@ -25,12 +25,10 @@ def task_two(incoming_list):
     letters = []
     digits = []
     for i in incoming_list:
-        try:
-            int(i)
+        if i.isdigit():
             digits.append(i)
-        except:
+        else:
             letters.append(i)
-
     print(f"Буквы: {letters}")
     print(f"Цифры: {digits}")
 
@@ -62,4 +60,5 @@ x.pop() - удалить и вернуть последний элемент с�
 x.popleft() - удалить и вернуть первый элемент списка
 а так же есть функции remove и insert аналогичные таковым у списков
 """
+
 
